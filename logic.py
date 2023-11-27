@@ -1,16 +1,16 @@
 solved_array = list(range(1,16))
 
 def isSolvable(arr):
-	inversions = 0 # Number of inversions in the array
-	width = 4      # width of the puzzle 
+	inversions = 0 
+	width = 4     
 	row = 0        
-	blankrow = 0   # row on which empty cell exists
+	blankrow = 0  
 
 	for i in range(0, len(arr)):
 		if i % width == 0:
-			row += 1 # move to the next row
+			row += 1 
 		if arr[i] == 0:
-			blankrow = row # empty cell exists on this row
+			blankrow = row 
 			continue
 
 		for j in range(i+1, len(arr)):
